@@ -3,9 +3,8 @@ input.onButtonPressed(Button.A, function () {
 })
 radio.onReceivedString(function (receivedString) {
     if (receivedString == partitura[valorIndice]) {
-        let lista: number[] = []
         basic.showIcon(IconNames.Yes)
-        while (valorIndice <= lista.length - 1) {
+        while (valorIndice <= partitura.length - 1) {
             valorIndice += 1
         }
     } else {
