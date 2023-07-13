@@ -1,30 +1,26 @@
-input.onButtonPressed(Button.A, function () {
-    valorIndice = 0
-})
 radio.onReceivedString(function (receivedString) {
-    if (receivedString == partitura[valorIndice]) {
+    if (receivedString == partitura[indicePartitura]) {
         basic.showIcon(IconNames.Yes)
-        while (valorIndice <= partitura.length - 1) {
-            valorIndice += 1
+        indicePartitura += 1
+        if (indicePartitura == partitura.length) {
+            basic.showIcon(IconNames.Happy)
+        } else {
+            basic.showString("" + (partitura[indicePartitura]))
         }
     } else {
         basic.showIcon(IconNames.No)
+        basic.showString("" + (partitura[indicePartitura]))
     }
 })
-input.onButtonPressed(Button.B, function () {
-    valorIndice += 1
-})
-let valorIndice = 0
+let indicePartitura = 0
 let partitura: string[] = []
 radio.setGroup(1)
 partitura = [
 "a",
 "b",
 "c",
-"d",
-"e"
+"a",
+"b"
 ]
-valorIndice = 0
-basic.forever(function () {
-    basic.showString("" + (partitura[valorIndice]))
-})
+indicePartitura = 0
+basic.showString("" + (partitura[indicePartitura]))
