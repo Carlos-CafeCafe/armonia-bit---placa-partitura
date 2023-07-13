@@ -50,4 +50,4 @@ Feliz_Cumpleaños = [
 "a",
 "b"
 ]
-radio.setGroup(1)
+radio.setGroup(3)
