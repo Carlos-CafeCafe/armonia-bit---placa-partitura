@@ -1,9 +1,21 @@
 function seleccionarMúsica () {
-    if (musica == 1) {
-        partitura = Para_Elisa
+    if (musica == 0) {
+        partitura = [
+        "c",
+        "a",
+        "b",
+        "b",
+        "b"
+        ]
     }
-    if (musica == 2) {
-        partitura = Feliz_Cumpleaños
+    if (musica == 1) {
+        partitura = [
+        "a",
+        "b",
+        "c",
+        "a",
+        "b"
+        ]
     }
     indicePartitura = 0
     basic.showString("" + (partitura[indicePartitura]))
@@ -34,20 +46,4 @@ let notaRecibida = ""
 let indicePartitura = 0
 let partitura: string[] = []
 let musica = 0
-let Feliz_Cumpleaños: string[] = []
-let Para_Elisa: string[] = []
-Para_Elisa = [
-"c",
-"a",
-"b",
-"b",
-"b"
-]
-Feliz_Cumpleaños = [
-"a",
-"b",
-"c",
-"a",
-"b"
-]
 radio.setGroup(3)
